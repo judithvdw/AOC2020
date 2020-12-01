@@ -1,11 +1,11 @@
-def get_answer_1(amounts) -> int:
+def get_answer_1(amounts: list) -> int:
     for amount_1 in amounts:
         for amount_2 in amounts:
             if amount_1 + amount_2 == 2020:
                 return amount_1 * amount_2
 
 
-def get_answer_2(amounts) -> int:
+def get_answer_2(amounts: list) -> int:
     for amount_1 in amounts:
         for amount_2 in amounts:
             for amount_3 in amounts:
