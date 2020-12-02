@@ -22,7 +22,7 @@ def is_valid_part_2(code: list) -> bool:
     letter = code[2]
     pwd = list(code[3])
 
-    return bool(pwd[pos_1] == letter) != bool(pwd[pos_2] == letter)
+    return (pwd[pos_1] == letter) ^ (pwd[pos_2] == letter)
 
 
 if __name__ == '__main__':
