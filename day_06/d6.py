@@ -1,4 +1,4 @@
-def somebody_yes(form_groups):
+def anyone_yes(form_groups):
     totals = []
     for form_group in form_groups:
         unique_answers = set()
@@ -8,7 +8,7 @@ def somebody_yes(form_groups):
     return totals
 
 
-def all_yes(form_groups):
+def everyone_yes(form_groups):
     totals = []
     for form_group in form_groups:
         letter_forms = [set(list(form)) for form in form_group]
@@ -25,5 +25,5 @@ if __name__ == '__main__':
     with open('6.txt') as f:
         forms = parse_input(f.read())
 
-    print("part 1", sum(somebody_yes(forms)))
-    print("part 2", sum(all_yes(forms)))
+    print("part 1", sum(anyone_yes(forms)))
+    print("part 2", sum(everyone_yes(forms)))
