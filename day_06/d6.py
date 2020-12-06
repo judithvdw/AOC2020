@@ -1,4 +1,7 @@
-def anyone_yes(form_groups):
+from typing import List
+
+
+def anyone_yes(form_groups: list) -> List[int]:
     totals = []
     for form_group in form_groups:
         unique_answers = set()
@@ -8,7 +11,7 @@ def anyone_yes(form_groups):
     return totals
 
 
-def everyone_yes(form_groups):
+def everyone_yes(form_groups: list) -> List[int]:
     totals = []
     for form_group in form_groups:
         letter_forms = [set(list(form)) for form in form_group]
@@ -17,7 +20,7 @@ def everyone_yes(form_groups):
     return totals
 
 
-def parse_input(blob: str):
+def parse_input(blob: str) -> list:
     return [passport.strip().split() for passport in blob.split("\n\n")]
 
 
