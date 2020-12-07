@@ -1,7 +1,3 @@
-from typing import Union
-import pprint
-
-
 def clean_key(k: str) -> str:
     return " ".join(k.split()[:2])
 
@@ -55,5 +51,5 @@ if __name__ == '__main__':
     with open("7.txt") as f:
         bag_rules = parse_input(f.readlines())
 
-print(part_1(bag_rules))
-print(n_of_bags(bag_rules, "shiny gold") - 1)
+print("part 1:", part_1(bag_rules))
+print("part 2:", n_of_bags(bag_rules, "shiny gold") - 1)
