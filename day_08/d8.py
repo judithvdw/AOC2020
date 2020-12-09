@@ -47,7 +47,7 @@ def debugger(program: List[List[Union[str, int]]]) -> int:
         accumulator, code = run_program(debug_copy)
         if code == "YAY!":
             return accumulator
-    print("Debuging unsucccesfull")
+    print("Debugging unsuccessful")
 
 
 if __name__ == '__main__':
