@@ -3,7 +3,7 @@ from itertools import groupby
 from typing import List
 
 
-def differences(adapters):
+def differences(adapters: List[int]) -> List[int]:
     adapters_in_order = sorted(adapters)
 
     diffs = [adapters_in_order[0]]
@@ -20,16 +20,7 @@ def calc_combinations(diffs: List[int]) -> int:
     groups = [''.join(g) for _, g in groupby(diffs)]
     for group in groups:
         if group[0] == '1':
-            if len(group) == 1:
-                continue
-            elif len(group) == 2:
-                total *= 2
-            elif len(group) == 3:
-                total *= 4
-            elif len(group) == 4:
-                total *= 7
-            else:
-                print("Go do maths or something")
+            total *= sum(range(len(group))) + 1
     return total
 
 
